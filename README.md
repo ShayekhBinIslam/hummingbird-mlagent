@@ -12,6 +12,11 @@ This project is shows how to create intelligent flying hummingbirds that can nav
 ![Policy](img/policy.png)
 
 ## Playing Against the Trained Agent
+![video](img/video.gif)
+
+# Control
+
+
 
 # Source
 
