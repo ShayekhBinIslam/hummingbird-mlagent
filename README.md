@@ -5,27 +5,45 @@ Reinforcement Learning is one of the most exciting types of Artificial Intellige
 
 This project shows how to create intelligent flying hummingbirds that can navigate to flowers, dip their beaks in, and drink nectar. These hummingbirds have six degrees of freedom, meaning they can fly and turn in any direction to find targets. They have more complicated controls and their flight paths cannot be solved with traditional navigation systems. A training environment is crafterd and neural networks are trained to perform this challenging task, then a player can compete against the birds in a simple mini-game.
 
-# Demonstration
+# Trainining Neural Networks
+## Instructions
 
-## Trainining Neural Networks
+In `Behavior Parameter` Change the `Behavior Type` of `Hummingbird` to `Default`.
+
+### Running training
+
+`mlagents-learn ./config/trainer_config.yaml --run-id humming_00`
+
+### Visualization
+
+`tensorboard --logdir ./config/summaries`
+
+### Trained Weights and Using It
+
+Use the `Hummingbird.nn` file in the directory specified in `--run-id` parameter during training as `Model` for `Hummingbird`'s `Behavior Parameter`. This `Hummingbird` is the Machine Learning agent against which the player will compete. For the Player `Hummingbird`, set `Behavior Type` to `Heuristic Only`.
+
+## Sample Output
+
 ![Cumulative Reward](img/cum_reward.png)
 ![Policy](img/policy.png)
 
-## Playing Against the Trained Agent
+
+# Playing Against the Trained Agent
 
 <p align="center">
    <img src="img/video.gif" alt="video loading...">
 </p>
 
-<div style="text-align:center"> 
-  <video style="width:600px;max-width:100%;" controls="">
-    <source src="img/video.gif" type="video/mp4">
-    
-  </video>
-</div>
+## Controls
 
-# Control
-
+Direction | Key     |Direction | Key     
+----------|---------|----------|---------
+Forward   | `W`     |Pitch Up  | `↑`
+Backward  | `S`     |Pitch Down| `↓`
+Left      | `A`     |Turn Left | `←`
+Right     | `D`     |Turn Right| `→`
+Up        | `E`     |
+Down      | `C`     |
 
 
 # Source
