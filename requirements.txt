@@ -1,0 +1,2 @@
+mlagents==0.16.1
+mlagents-envs==0.16.1
